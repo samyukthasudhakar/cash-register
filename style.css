@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body{
+    background: url("bg.svg") no-repeat;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+}
+
+table, th, tr,td{
+    margin-top: 1rem;
+    border: solid 1px;
+}
+
+td{
+    width:2rem;
+    text-align: center;
+}
+
+.cash_Given{
+    display:none;
+}
