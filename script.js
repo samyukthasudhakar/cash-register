@@ -2,6 +2,7 @@ const calculate = document.querySelector("#compute");
 const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
 const alert = document.querySelector("#alert");
+const balance = document.querySelector("#balance");
 const table = document.querySelector("#moneyTable");
 
 function callCalculateChange(){
@@ -17,7 +18,7 @@ function calculateNumberOfNotes(){
     var i =0; var count = 0; var rem=0;
     
     var balanceAmount = Number (cashGiven.value) - Number(billAmount.value);
-            
+    balance.innerText = "Balance Amount : " + balanceAmount;
     rem = balanceAmount;
     while (rem>0){
         if (rem < keys[i]){
@@ -34,11 +35,14 @@ function calculateNumberOfNotes(){
     }
     
     table.style.display = "block";
+    balance.style.display = "block";
 }
 
 const calculateBalance = () =>{
 
     if(billAmount.value===""){
+        table.style.display="none";
+        balance.style.display="none";
         alert.innerText = "Please Enter Bill Amount 👆🏽";
     }
     else{
@@ -51,10 +55,12 @@ const calculateBalance = () =>{
 
             if(cashGiven.value===""){
                 table.style.display="none";
+                balance.style.display="none";
                 alert.innerText = "Please Enter Cash Given 👆🏽";
             }
             else if(Number(billAmount.value)>Number(cashGiven.value)){
                 table.style.display="none";
+                balance.style.display="none";
                 alert.innerText = "Bill Amount cannot be greater than Cash Given. Pleae re-enter the values 👉🏽👈🏽";
             }
             else{
