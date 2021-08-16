@@ -5,40 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="cash-register.png" type="image/icon">
     <title>Cash Register</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Cash Register 💸</h1>
-        <p>Making calculations easier !</p>
+    <div class="parent">
+        <div class="container">
+            <h1>Cash Register 💸</h1>
+            <p>Finding balance amount made easy!</p>
+    
+            <input id="bill-amount" type="number" placeholder="Enter Bill Amount">
+            <input id="cash-given" type="number" class="cash_Given" placeholder="Enter Cash Given">
+            <button id="compute" value="next">Next</button>
+            <p id="alert"></p>
+            <table id="moneyTable" style="display: none;">
+                <tr>
+                    <th>No of Bills</th>
+                    <td id="one">0</td>
+                    <td id="five">0</td>
+                    <td id="ten">0</td>
+                    <td id="twenty">0</td>
+                    <td id="hundred">0</td>
+                    <td id="fiveHundred">0</td>
+                    <td id="twoThousand">0</td>
+                </tr>
+            
+                <tr>
+                    <th>Amount</th>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>100</td>
+                    <td>500</td>
+                    <td>2000</td>
+                </tr>
+            </table>
+    
+            
+        </div>
+        <div class="footer">
+            <a href="https://github.com/samyukthasudhakar"><img src="github.svg"  class="footer_icon"></a>
+            <a href="https://www.linkedin.com/in/samyukthasudhakar/"><img src="linkedin.svg" class="footer_icon"></a>
+            <a href="https://twitter.com/samyuktha7300"><img src="twitter.svg"  class="footer_icon"></a>
+            <a href="https://samyukthasudhakar.netlify.app/"><img src="person.svg"  class="footer_icon"></a>
+        </div>
     </div>
-    <input id="bill-amount" placeholder="Enter Bill Amount">
-    <input id="cash-given" class="cash_Given" placeholder="Enter Cash Given">
-    <button id="compute" value="next">Next</button>
-    <table id="moneyTable" style="border: solid 1px;display: none;">
-        <tr>
-            <th>No of Bills</th>
-            <td id="one">0</td>
-            <td id="five">0</td>
-            <td id="ten">0</td>
-            <td id="twenty">0</td>
-            <td id="hundred">0</td>
-            <td id="fiveHundred">0</td>
-            <td id="twoThousand">0</td>
-        </tr>
-        
-        <tr>
-            <th>amount</th>
-            <td>1</td>
-            <td>5</td>
-            <td>10</td>
-            <td>20</td>
-            <td>100</td>
-            <td>500</td>
-            <td>2000</td>
-        </tr>
-    </table>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
