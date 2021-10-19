@@ -41,9 +41,10 @@ function calculateNumberOfNotes(){
 const calculateBalance = () =>{
 
     if(billAmount.value===""){
-        table.style.display="none";
-        balance.style.display="none";
         alert.innerText = "Please Enter Bill Amount 👆🏽";
+    }
+    else if(billAmount.value<0){
+        alert.innerText = "Please Enter a positive value for Bill Amount 👆🏽";
     }
     else{
 
@@ -52,17 +53,16 @@ const calculateBalance = () =>{
             callCalculateChange();
         }
         else{
-
             if(cashGiven.value===""){
-                table.style.display="none";
-                balance.style.display="none";
                 alert.innerText = "Please Enter Cash Given 👆🏽";
             }
+            else if(cashGiven.value<0){
+                alert.innerText = "Please Enter a positive value for Cash Given 👆🏽";
+            }
             else if(Number(billAmount.value)>Number(cashGiven.value)){
-                table.style.display="none";
-                balance.style.display="none";
                 alert.innerText = "Bill Amount cannot be greater than Cash Given. Pleae re-enter the values 👉🏽👈🏽";
             }
+            
             else{
                 calculateNumberOfNotes();
             }
